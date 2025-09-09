@@ -1,2 +1,2 @@
-# designweb
-repositório da disciplina de design web.
+# Design Web
+Repositório da disciplina de design web.
