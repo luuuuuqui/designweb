@@ -1,0 +1,30 @@
+header, footer {
+    background-color: rebeccapurple;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    gap: 5rem; /* o vão entre os elementos. similar ao margin, porém mais indicado ao utilizar flex. */
+    flex-wrap: wrap; /* permite que os elementos "quebrem" a linha e continuem na próxima, caso não caibam em uma única linha. */
+    padding: 2rem;
+}
+
+main > section {
+    /* o caractere ">" seleciona o elemento filho direto. */
+    width: 20rem;
+    padding: 1rem;
+    border: 1px solid salmon;
+    border-radius: 1rem;
+    box-shadow: 0 0 .25rem .25rem rgb(235, 235, 235);
+    margin: 1rem 0;
+}
+
+main > section img {
+    display: block; /* transforma a imagem em um elemento de bloco, permitindo o uso de margin auto. */
+    margin: 0 auto 1rem auto; /* centraliza a imagem horizontalmente e adiciona uma margem inferior. */
+    width: 5rem;
+}

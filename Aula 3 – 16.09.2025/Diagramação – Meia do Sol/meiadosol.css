@@ -1,0 +1,24 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+} */
+
+figure {
+    float: right; /* atributo que permite o elemento flutuar para o lado direito ou esquerdo da página. */
+}
+
+div.outrospercursos {
+    float: left;
+    border: 2px solid black;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+footer {
+    background-color: rebeccapurple;
+    padding: 1rem;
+    text-align: center;
+    clear: both; /* atributo que limpa os elementos flutuantes anteriores, garantindo que o rodapé fique abaixo deles. */
+}
