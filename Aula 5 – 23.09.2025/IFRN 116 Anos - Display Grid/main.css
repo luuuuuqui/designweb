@@ -1,0 +1,39 @@
+main {
+    max-width: 70rem;
+    margin: 1rem auto;
+    display: grid;
+    gap: 1rem; /* Assim como no "display: flex", define o espaçamento entre áreas. */
+    grid-template-columns: 1fr 2fr 1fr; /* fr = unidade fracionária */
+    /* O "grid-template-column" define a LARGURA da coluna. */
+    
+    grid-template-rows: 10rem; /* Similarmente ao columns, o "grid-template-rows" define a ALTURA das linhas, porém cuidado, pois a altura ficará LIMITADA.
+    A quantidade de valores deve ser igual a quantidade de linhas. */
+
+    grid-template-areas:
+    "c b d"
+    "a a d";
+    /* A variável não pode começar ou ser apenas com número, nem espaço nem caracteres especiais. Também não pode ficar na diagonal. */
+}
+
+section {
+    border: 1px solid black;
+    padding: 1rem;
+    overflow: auto; /* Possibilita a barra de rolagem. */
+}
+
+section.notícias {
+    grid-area: a;
+    /* A definição de area é feita utilizando o atributo grid-area. */
+}
+
+section.cooperacao {
+    grid-area: b;
+}
+
+section.organizadores {
+    grid-area: c;
+}
+
+section.corrida {
+    grid-area: d;
+}

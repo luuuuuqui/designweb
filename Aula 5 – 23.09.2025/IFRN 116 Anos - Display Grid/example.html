@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo de Display Grid</title>
+    <style>
+        body > * {
+            max-width: 960px;
+            margin: auto;
+            padding: 10px;
+            gap: 10px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 100px 100px 100px;
+            grid-template-areas:
+            "a b c"
+            "a b d"
+            "e e e";
+            gap: 10px;
+            background: #e0e0e0;
+            padding: 20px;
+        }
+
+        .item {
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+        }
+
+        .a {
+            grid-area: a;
+            background-color: goldenrod;
+        }
+
+        .b {
+            grid-area: b;
+            background-color: cadetblue;
+        }
+
+        .c {
+            grid-area: c;
+            background-color: coral;
+        }
+
+        .d {
+            grid-area: d;
+            background-color: forestgreen;
+        }
+
+        .e {
+            grid-area: e;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h2>Exemplo de Display Grid</h2>
+    <div class="container">
+        <div class="item a">A</div>
+        <div class="item b">B</div>
+        <div class="item c">C</div>
+        <div class="item d">D</div>
+        <div class="item e">E</div>
+    </div>
+    <p>
+        Este exemplo mostra como o <strong>CSS Grid</strong> organiza os elementos em linhas e colunas.<br>
+        Os itens podem ocupar mais de uma coluna ou linha usando as propriedades <code>grid-column</code> e <code>grid-row</code>.
+    </p>
+</body>
+</html>
