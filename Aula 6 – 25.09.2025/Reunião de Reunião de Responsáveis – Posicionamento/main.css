@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header, footer, section {
+    padding: 2rem;
+    background-color: lightcyan;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 0.7rem;
+    margin-bottom: 2rem;
+}
+
+header, footer {
+    background-color: lightskyblue;
+    text-align: center;/
+}
+
+main {
+    margin-top: 6rem;
+}
+
+header {
+    position: fixed;
+    /* vai posisionar o elemento sobre a página. ativa o eixo z, sobrepondo os elementos da página. 
+    em relação ao comportamento de estilo, o elemento deixa de ser "display: block" e passa a ser "inline-block", isto é, perde a largura.
+    */
+    top: 0; /* coordenadas - escolher no mínimo uma e no máximo 2, um para o eixo x e outro para o y. */
+    width: 100vw;
+    /* vw = viewport width (largura da página no dispositivo.) */
+    z-index: 1;
+}
+
+#esmaecer {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+#modal {
+    background-color: #fafafa;
+    padding: 2rem;
+    width: 20rem;
+    /* height: 10rem; */
+    position: absolute;
+    z-index: 11;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+#modal img {
+    width: 100%;
+    border-radius: 1rem;
+    margin-top: 1rem;
+}
+
+#modal a {
+    display: block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    width: 320px;
+    background-color: red;
+    color: black;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    color: #fafafa;
+    overflow: hidden;
+}
+
+/* #modal h2 {
+    position: relative;
+    margin-bottom: 1rem;
+    background-color: lightyellow;
+    top: 10px;
+} */
+
+/* #modal::before {
+    content: "";
+    position: fixed;
+    width: 100vw; 
+    height: 100vh; 
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+ */
