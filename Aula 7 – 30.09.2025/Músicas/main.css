@@ -1,0 +1,27 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul > li > ul {
+    list-style-type: none;
+    display: inline;
+}
+
+ul > li > ul > li {
+    gap: 3px;
+}
+ul > li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+ul > li > ul > li {
+    display: inline-block;
+}

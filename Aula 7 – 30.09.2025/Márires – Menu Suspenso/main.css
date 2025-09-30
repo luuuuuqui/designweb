@@ -1,0 +1,44 @@
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+ol > li {
+    display: inline;
+    position: relative; /* necessário para o submenu ficar posicionado em relação ao pai */
+}
+
+ol > li > a {
+    /* o ancora é formatado para ocupar uma area melhor, assim melhorando a acesibilidade. */
+    display: inline-block;
+    padding: 1rem;
+    color: darkcyan;
+    background-color: gainsboro;
+    text-decoration: none;
+}
+
+li > ul {
+    position: absolute;
+    padding: 1rem;
+    background-color: gainsboro;
+    top: 40px;
+    left: 0;
+    visibility: hidden; /* esconde o submenu */
+
+}
+
+ol > li:hover > ul {
+    /* ao passar o mouse sobre o li que está no ol formata-se o ul. */
+    visibility: visible; /* mostra o submenu quando o mouse estiver sobre o item pai */
+}
+
+nav > ol > li > a img {
+    width: 0.8rem;
+    vertical-align: middle;
+    margin-left: 0.3rem;
+    filter: brightness(100%) invert(100%);
+}
