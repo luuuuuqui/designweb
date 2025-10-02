@@ -1,0 +1,6 @@
+label[for] {
+    display: inline-block;
+    width: 12rem;
+    /* a definição nao permite a definição de largura por ser display: inline, sendo necessário definir display: inline-block */
+    vertical-align: top;
+}

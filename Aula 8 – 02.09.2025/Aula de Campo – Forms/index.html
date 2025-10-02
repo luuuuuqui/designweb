@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição da Aula de Campo</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <h1>Inscrição para a aula de campo</h1>
+    <form action="dadosenvidados.html" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" placeholder="Nome"></input><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Email"><br>
+        <label for="curso">Curso:</label>
+        <select name="curso" id="curso">
+            <!-- COMBOBOX -->
+            <option value="infoweb">InfoWeb</option>
+            <option value="adm">Administração</option>
+            <option value="msi">Manutenção e Suporte</option>
+            <option value="eletro">Eletrotécnica</option>
+            <option value="edif">Edificações</option>
+            <option value="edif">Mineração</option>
+        </select> <br>
+        <label for="">Diretoria:</label>
+        <label><input type="radio" name="dir" value="diatinf">DIATINF</label>
+        <label><input type="radio" name="dir" value="diaren">DIAREN</label>
+        <label><input type="radio" name="dir" value="diacin">DIACIN</label>
+        <label><input type="radio" name="dir" value="diacon">DIACON</label>
+        <label><input type="radio" name="dir" value="diac">DIAC</label>
+        <br>
+        <!-- quando se usa o componente radio ou checkbox, o valor do name tem que ser o mesmo. -->
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" list="cidade-list"> <br>
+        <datalist id="cidade-list">
+            <option value="Natal">
+            <option value="Mossoró">
+            <option value="Pau dos Ferros">
+            <option value="Caicó">
+            <option value="Currais Novos">
+            <option value="Assu">
+            <option value="Santa Cruz">
+            <option value="Macau">
+            <option value="São Gonçalo do Amarante">
+            <option value="Parnamirim">
+            <option value="Lagoa Salgada">
+        </datalist>
+        <label for="obs">Observações:</label>
+        <textarea name="obs" id="obs" cols="30" rows="10" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi at minima culpa qui cumque quaerat sed a eligendi, iure aspernatur tempora ea reiciendis, praesentium excepturi perspiciatis, debitis provident asperiores earum."></textarea>
+        <br>
+        <input type="submit" value="Enviar">
+        
+    </form>
+</body>
+</html>
