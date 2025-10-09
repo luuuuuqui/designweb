@@ -1,0 +1,48 @@
+@media (max-width: 743px) {
+  body {
+    background-color: #000;
+    color: #fff;
+  }
+  header {
+    background-color: #111;
+  }
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+  section {
+    flex-basis: 96%;
+  }
+}
+
+@media (min-width: 744px) and (max-width: 1439px) {
+  body {
+    background-color: #222;
+    color: #eee;
+  }
+  header {
+    background-color: #333;
+  }
+  nav a {
+    display: inline-block;
+    margin: 0 15px;
+  }
+  section {
+    flex-basis: 48%;
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    background-color: #fff;
+    color: #000;
+  }
+  header {
+    background-color: #f4f4f4;
+  }
+  nav a {
+    display: inline;
+    margin: 0 10px;
+  }
+
+}
