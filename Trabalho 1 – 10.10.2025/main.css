@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body { 
+    background-color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header {
+    
+    background: linear-gradient(to left,#7292A6, #224459 );
+    color: white;
+    padding: 1rem;
+}
+
+header, h2, #a {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: lighter;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.5fr 1fr 1fr;
+    grid-template-rows: 200px 200px 200px;
+    grid-template-areas: 
+    "a b c c d"
+    "a e f g h"
+    "a i f j j";
+    gap: 10px;
+    padding: 20px 0;
+}
+
+section {
+    background-color: rgb(236, 236, 236);
+    padding: 1rem;
+}
+
+#a {
+    grid-area: a;
+    display: flex;
+    background-color: #c5d1d9;
+    color: #4a82a4;
+    gap: 10rem;
+    li {
+        list-style-type: none;
+        font-size: 2rem;
+    }
+}
+
+#b {
+    grid-area: b;
+}
+
+#c {
+    grid-area: c;
+    table {
+        width: 100%;
+        max-width: 500px;
+        border-collapse: collapse;
+        td {
+            padding: 8px 12px;
+            border: 1px solid white;
+        }
+    }
+}
+
+#c table td div {
+    border: 1px solid white;
+    padding: 4px 0;
+}
+
+#d {
+    grid-area: d;
+}
+
+#e {
+    grid-area: e;
+    ul {
+        padding-left: 1rem;
+        li {
+            padding-left: 0.25rem;
+        }
+    }
+}
+
+#f /* form */{
+    grid-area: f;
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: .25rem;
+        input[type="submit"] {
+            width: 60%;
+            align-self: center;
+            background-color: #252525;
+            border: none;
+            color: white;
+        }
+    }
+    form > input {
+        width: var(100% - 1rem);
+        padding: 0.5rem;
+    }
+}
+
+#g {
+    grid-area: g;
+    
+}
+
+#h {
+    grid-area: h;
+}
+
+#i {
+    grid-area: i;
+}
+
+#j {
+    grid-area: j;
+    ul {
+        padding-left: 1rem;
+        li {
+            padding-left: 0.25rem;
+        }
+    }
+}
+
+.pessoa {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    
+    p {
+        position: absolute;
+        padding: 0.75rem 0;
+        background-color: rgba(0, 0, 0, 0.301);
+        color: white;
+        text-align: center;
+        width: 100%;
+        top: 50%;
+    }
+
+    img {
+        display: block;
+        object-fit: cover;
+        object-position: center;
+        height: 100%;
+        width: 100%;
+        filter: grayscale(90%);
+    }
+}
+
+footer {
+    width: 100vw;
+    background-color: #224459;
+    color: white;
+    padding: 5rem;
+    text-align: center;
+    bottom: 0;
+    p {
+        display: inline-block;
+    }
+}
