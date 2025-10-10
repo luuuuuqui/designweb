@@ -8,16 +8,25 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+header, main, footer {
+    overflow: hidden;
+}
+
 header {
-    
     background: linear-gradient(to left,#7292A6, #224459 );
     color: white;
     padding: 1rem;
+    padding-right: 0;
+    width: calc(100% - 1rem);
 }
 
 header, h2, #a {
     font-family: 'Roboto Mono', monospace;
-    font-weight: lighter;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #224459;
 }
 
 main {
@@ -42,10 +51,17 @@ section {
     display: flex;
     background-color: #c5d1d9;
     color: #4a82a4;
-    gap: 10rem;
-    li {
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
         list-style-type: none;
+    }
+    li {
         font-size: 2rem;
+        a {
+            color: inherit;
+        }
     }
 }
 
@@ -155,10 +171,10 @@ section {
 }
 
 footer {
-    width: 100vw;
+    width: 100%;
     background-color: #224459;
     color: white;
-    padding: 5rem;
+    padding: 5rem 0;
     text-align: center;
     bottom: 0;
     p {
