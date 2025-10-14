@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+    /* definição de variáveis no elemento principal. */
+    --princ-tx: blue;
+    --princ-bg: cadetblue;
+}
+
+body {
+    background-color: var(--princ-bg);
+    font-family: "Montserrat", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    animation-name: rainbow;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+header + section {
+    background-color: cornflowerblue;
+}
+
+/* section p {
+    animation-name: mostrar;
+    animation-duration: 0.25s;
+    animation-iteration-count: infinite;
+} */
+
+@keyframes mostrar {
+    0% {
+        transform: translateX(-10px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(3px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes rainbow {
+    0% {
+        background-color: #f00;
+    }
+    25% {
+        background-color: #8f0;
+    }
+    50% {
+        background-color: #0ff;
+    }
+    75% {
+        background-color: #80f;
+    }
+    100% {
+        background-color: #f00;
+    }
+}

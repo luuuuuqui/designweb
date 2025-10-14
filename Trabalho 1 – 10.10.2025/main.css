@@ -39,6 +39,8 @@ main {
     "a i f j j";
     gap: 10px;
     padding: 20px 0;
+    max-width: 1920px;
+    margin: auto;
 }
 
 section {
