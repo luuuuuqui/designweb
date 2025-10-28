@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --azulescuro: #08254F;
+            --corcreme:  #D8D4CB;
+        }
+
+        section {
+            padding: 2rem;
+        }
+
+        section:first-child {
+            background-color: var(--corcreme);
+        }
+
+        /* section:nth-child(2) {
+            background-color: var(--azulescuro);
+            color: white;
+        } */
+
+        section:nth-child(3), section:nth-child(2) {
+            max-width: 70rem;
+            margin: 0 auto; 
+        }
+
+        section:nth-child(3) h1 {
+            border: 1px solid black;
+        }
+
+        section:nth-child(2) {
+            display: flex;
+            gap: 1rem;
+            background-color: violet;
+        }
+
+        section:nth-child(2) div {
+            color: white;
+            background-color: var(--azulescuro);
+            text-align: center;
+
+            padding: 2rem;
+            position: relative;
+            top: -2rem;
+        }
+
+        section:nth-child(2) div h2 {
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Só pq tem que ter.</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dicta, dolorem odio enim, libero praesentium sed id temporibus repellat sequi perspiciatis eius facere laborum eaque laudan tium velit natus voluptatem incidunt?</p>
+    </section>
+
+</body>
+</html>
