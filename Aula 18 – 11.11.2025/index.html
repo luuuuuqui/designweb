@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem dignissimos iste, dolorem perferendis minima qui nobis rerum error nisi deleniti maxime nulla quasi, atque numquam ex doloribus libero quae dolore.</p>
+    <button id="btn">mudar cor</button>
+    <button onclick="mudarcor()">mudar cor 2</button>
+    <input type="color" id="cor">
+    
+    <script>
+        btn = document.getElementById("btn")
+        btn.addEventListener("click", function (e) {
+            let cor = document.getElementById("cor").value;
+            document.body.style.backgroundColor = cor;
+        })
+
+        function mudarcor() {
+            let cor = document.getElementById("cor").value;
+            document.body.style.backgroundColor = cor;
+        }
+
+        function somar() {
+            return 3 + 8;
+        }
+
+        console.log(somar());
+
+
+        function somar2(num1, num2) {
+            return num1 + num2;
+        }
+
+        console.log(somar2(5, 8));
+
+        function somar3(num1, num2, num3) {
+            return num1 + num2 + num3;
+        }
+
+        console.log(somar3(3, 5, 7))
+
+
+        function somar4(num1, num2) {
+            if (!isNaN(num1) && !isNaN(num2)) {
+                return num1 + num2;
+            }
+            else return "Ambos parâmetros devem ser números."
+        }
+
+        console.log(somar4(1, "a"))
+
+        function somar5(num1 = 0, num2 = 0) {
+            return num1 + num2
+        }
+
+        console.log(somar5(7))
+
+        function borda(nome, borda) {
+            document.body.style.borderWidth = borda+"rem";
+            document.body.style.borderStyle = "solid";
+            document.body.style.borderColor = nome;
+        }
+
+        borda("#3c9", 5)
+
+
+
+    </script>
+</body>
+
+</html>
