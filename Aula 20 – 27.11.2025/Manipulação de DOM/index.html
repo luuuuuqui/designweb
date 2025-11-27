@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>manipulação de dom</title>
+    <style>
+        .destaque {
+            background-color: aqua;
+            font-size: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <p id="pid">DOM - Modelo de Objeto de Documento <span>SPAN1</span></p>
+    <p class="pclass">DOM - Modelo de Objeto de Documento <span>SPAN2</span></p>
+    <!-- o script deveria ser externo (<script src="script.js"></script>) -->
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    
+    <button id="btn">
+        <img src="lagoasalgada.png" alt="" srcset="" width="300">
+    </button>
+
+    <ol quantidade="3" data-produtos="livros, canetas, cadernos">
+        <li>Produto 1</li>
+        <li>Produto 2</li>
+        <li>Produto 3</li>
+    </ol>
+    <script>
+        // manipulação de DOM (Document Object Model)
+
+        const pId = document.getElementById("pid");
+        const pClass = document.querySelector("p span");
+
+        pClass.innerHTML = "<b>NOVO</b> texto para o span.";
+
+        document.querySelector(".pclass").classList.add("destaque");
+
+        document.getElementsByTagName("li")[1].style.color = "green";
+        console.log(document.getElementsByTagName("li").length);
+
+        const img = document.querySelector("img");
+
+        console.log(img.getAttribute("src"));
+        console.log(img.getAttribute("width"));
+
+        btn = document.getElementById("btn");
+
+        btn.addEventListener("click", function() {
+            if (img.getAttribute("src") === "lagoasalgada.png") {
+                img.setAttribute("src", "lagoasalgada normal.png");
+            } else {
+                img.setAttribute("src", "lagoasalgada.png");
+            }
+        });
+
+        const lista = document.querySelector("ol");
+
+        console.log(lista.getAttribute("quantidade"));
+        console.log(lista.hasAttribute("quantidade"));
+        lista.removeAttribute("quantidade");
+        console.log(lista.hasAttribute("quantidade"));
+
+        console.log(lista.dataset.produtos);
+        console.log(lista.atributes);
+    </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="a">
+
+    </div>
+    <script>
+        // const numbers = [1, 2, 3, 4, 5];
+
+        // // Usando a função nativa map para criar um novo array com os números ao quadrado
+        // const squaredNumbers = numbers.map(function(num) {
+        //     return num * num;
+        // });
+
+        // console.log(squaredNumbers); // Output: [1, 4, 9, 16, 25]
+
+        div = document.getElementById("a");
+
+
+
+        
+            
+
+                
+
+        let nome = "InfoWeb";
+
+        console.log("Comprimento da string:", nome.length);
+        console.log("Primeiro caractere da string:", nome.charAt(0));
+        console.log("Substituir string:", nome.replace("Info", "Informática para "));
+        console.log("Pegar substring da string:", nome.substr(4,3));
+        console.log("Divide a string:", nome.split("o"));
+        console.log("Deixa a string minúscula:", nome.toLowerCase());
+        console.log("Deixa a string maiúscula:", nome.toUpperCase());
+    
+        nome = "   InfoWeb   ";
+        console.log("Remove espaços em branco no início e no fim da string:", nome.trim());
+        console.log("Juntar string:", nome.trim().concat(" - IFRN CNat"));
+
+        // Funções nativas de matemática:
+
+        console.log("Valor de pi(π):", Math.PI);
+
+        console.log("Valor absoluto de -10:", Math.abs(-10));
+        console.log("Arredondar para cima 4.3:", Math.ceil(4.3));
+        console.log("Arredondar para baixo 4.7:", Math.floor(4.7));
+        console.log("Arredondar 4.5:", Math.round(4.5));
+        console.log("Número aleatório entre 0 e 1:", Math.random());
+        console.log("Potência de 2 elevado a 3:", Math.pow(2, 3));
+        console.log("Raiz quadrada de 16:", Math.sqrt(16));
+        console.log("Máximo entre 5, 10, 15:", Math.max(5, 10, 15));
+        console.log("Mínimo entre 5, 10, 15:", Math.min(5, 10, 15));
+
+        // Funções nativas de data:
+
+        const hoje = new Date();
+
+        console.log("Data e hora atual:", hoje);
+        console.log("Mês:", hoje.getMonth() + 1);
+        console.log("Ano atual:", hoje.getFullYear());
+        console.log("Data de hoje retornada:", hoje);
+
+        console.log("Dia do mês:", hoje.getDate());
+
+        console.log(hoje.getDate() + "/" + (hoje.getMonth() + 1) + "/" + hoje.getFullYear());
+
+        meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+
+        datadehoje = hoje.getDate() + " de " + meses[hoje.getMonth()] + " de " +  hoje.getFullYear()
+        
+        console.log(datadehoje);
+
+        function addparagraph(input) {
+            const temp = document.createElement("p");
+            temp.innerHTML = input;
+            document.getElementById("a").appendChild(temp);
+        }
+
+        addparagraph(datadehoje);
+
+        function contador() {
+            let d = new Date();
+            document.getElementById("a").innerHTML += d.getSeconds() + "<br>";
+        }
+
+
+    </script>
+</body>
+</html>

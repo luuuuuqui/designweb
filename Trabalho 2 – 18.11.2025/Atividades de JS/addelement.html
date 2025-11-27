@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Lucas Gabriel da Silva Duarte">
+    <title>lista de nomes ✍</title>
+</head>
+<body>
+    <div>
+        <label for="name">Nome:</label>
+        <input type="text" id="name"></input>
+        <button id="add">Adicionar</button>
+    </div>
+
+    <ul id="namelist">
+    </ul>
+
+    <script>
+        btn = document.getElementById("add")
+
+        btn.addEventListener('click', function(e){
+            const newname = document.createElement("li");
+            const input = document.getElementById("name");
+
+            if (input.value != "") {
+                newname.innerHTML = input.value;
+                input.value = '';
+                document.getElementById("namelist").appendChild(newname);
+            }
+        })
+    </script>
+</body>
+</html>
