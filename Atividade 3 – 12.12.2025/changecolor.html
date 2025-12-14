@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <h1 id="title">Hello, World!</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint ducimus doloremque enim dolores rem a nemo numquam voluptas ipsam sapiente! Quam ipsam dolorem repellendus ratione ducimus aliquid consequuntur alias totam.</p>
+    <script>
+        function changecolor(elementid, color = randomColor()) {
+            elemento = document.getElementById(elementid)
+            elemento.style.color = color;
+        }
+
+        function randomColor() {
+            return "#" + Math.floor(Math.random() * 256 * 256 * 256).toString(16).padStart(6, "0");
+        }
+    
+        setInterval(() => {
+            changecolor('title');
+        }, 30000);
+    </script>
+</body>
+</html>

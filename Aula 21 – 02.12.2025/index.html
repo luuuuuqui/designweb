@@ -1,0 +1,117 @@
+<!-- Consolas, 'Courier New', monospace -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventos.</title>
+    <style>
+        .grande {
+            font-size: 2rem;
+            color: blueviolet;
+        }
+
+        img {
+            width: 20px;
+            height: 20px;
+            position: absolute; /* Ou relative, fixed, sticky */
+            z-index: 2; /* Um valor maior que o outro elemento */
+            top: 10px; /* Exemplo de posicionamento */
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <ol id="alunos">
+        <li>Júlia</li>
+        <li>Marcos</li>
+        <li>Ana</li>
+        <li>Carlos</li>
+        <li>Sophia</li>
+
+    </ol>
+
+    <form action="" name="cadastro" id="cadastro">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome">
+        <label for="cidade">Cidade:</label>
+        <!-- combobox -->
+        <select id="cidade" name="cidade">
+            <option value="sp">São Paulo</option>
+            <option value="rj">Rio de Janeiro</option>
+            <option value="bh">Belo Horizonte</option>
+            <option value="salvador">Salvador</option>
+            <option value="fortal">Fortaleza</option>
+        <input type="submit">
+    </form>
+
+    <img src="https://www.pngall.com/wp-content/uploads/5/Target-Aim-PNG.png" alt="">
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident architecto aspernatur illo nulla pariatur officiis mollitia atque. Dolorem odio quibusdam deleniti ad. Error incidunt temporibus rerum quis veniam ratione voluptate.</p>
+    <p>Tempora, recusandae est quaerat nobis iure voluptatibus iusto fugiat enim atque veniam tempore accusamus beatae. Modi ea itaque ab corrupti laborum est, quos odit voluptas maxime reprehenderit! Doloribus, sunt iure.</p>
+    <p>Beatae debitis repellendus reprehenderit eius earum. Magnam deserunt rem aliquam deleniti eaque iure, magni odit voluptatem veritatis, delectus perferendis officiis voluptates ea temporibus? Exercitationem molestiae eligendi dolor maxime voluptatibus magnam.</p>
+    <p>Labore in, iure vel deserunt dolor ipsa sapiente eius illo magni natus, explicabo dolores ex exercitationem optio facere nobis odio neque numquam voluptas, reiciendis et rerum deleniti? Quae, fugiat recusandae.</p>
+    <p>Unde, ex rem atque laborum vitae minus dolorum magni esse quia adipisci eaque eos nobis quos temporibus ipsa. Rem nisi dolore id soluta. Ipsa beatae sequi perspiciatis libero officiis. Voluptate.</p>
+    <p>Asperiores cum sequi eius soluta eligendi enim id quaerat tenetur minus recusandae harum aspernatur quasi magni voluptatibus, magnam quae quibusdam velit autem incidunt adipisci nostrum. Aliquid non ducimus incidunt dignissimos?</p>
+    <p>Odit fuga maiores nemo amet vitae magnam quam, sed tempora molestias, blanditiis ab pariatur ratione a est? Illum nam dolorem eos ullam labore repellat maiores, perferendis, illo molestiae animi saepe!</p>
+    <p>Impedit sapiente laboriosam laborum incidunt quos alias rem quidem voluptatum rerum corporis, corrupti libero, porro enim iusto necessitatibus fugit autem consequuntur eos possimus amet voluptatibus totam facere? Ipsa, velit numquam?</p>
+    <p>Cum dicta quis consequatur ullam voluptas, quae aliquam accusamus commodi nobis, perferendis ipsa animi. Facilis reprehenderit odio perspiciatis temporibus, rerum libero! Voluptatum illum itaque asperiores quisquam animi atque, pariatur iste!</p>
+    <p>Voluptatum maiores quisquam, id explicabo sed veniam deserunt, enim labore blanditiis laborum, odit ipsa odio corrupti alias. In doloribus ut veritatis dolore adipisci perspiciatis eum consectetur sunt laudantium. Velit, quas!</p>
+    <script>
+        const lista = document.getElementById("alunos");
+        const novoli = document.createElement("li");
+        novoli.setAttribute("class", "grande");
+        novoli.textContent = "Novo Aluno: Pedro";
+        lista.appendChild(novoli); // adiciona o novo li ao final da lista
+
+        lista.removeChild(novoli); // remove o li que acabamos de adicionar
+
+        body = document.body;
+
+        function eventoscroll() {
+            console.log("Você rolou a página!");
+        }
+
+        function eventoload() {
+            console.log("A página terminou de carregar!");
+        }
+
+        window.addEventListener("scroll", eventoscroll);
+        window.addEventListener("load", eventoload);
+
+        const input = document.querySelector("input");
+
+        function eventokeydown(e) {
+            console.log("Você pressionou a tecla: " + e.key);
+        }
+
+        input.addEventListener("keydown", eventokeydown);
+
+        const form = document.getElementById("cadastro");
+
+        function eventosubmit(e) {
+            alert("Formulário enviado!");
+        }
+
+        form.addEventListener("submit", eventosubmit);
+
+        const cidade = form.cidade;
+
+        function eventochange() {
+            console.log("Você mudou o valor do campo cidade para: " + cidade.value);
+        }
+
+        cidade.addEventListener("change", eventochange);
+
+        window.addEventListener("mousemove", eventomousemove);
+
+        img = document.querySelector("img");
+        function eventomousemove(e) {
+            console.log("Posição do mouse: X=" + e.clientX + " Y=" + e.clientY);
+            img.style.left = (e.clientX - (getAttribute("width")/2)) + "px";
+            img.style.top = (e.clientY - 10) + "px";
+
+        }
+    </script>
+</body>
+</html>
