@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .favorito {
+            font-family: comic sans ms, "comic sans", "comic sans ms", cursive;
+            background-color: yellow;
+            color: red;
+            border: 2px solid red;
+            box-shadow: 2px 2px 5px gray;
+            transform: rotate(5deg) skew(13deg);
+            animation: bounce 0.5s infinite alternate;
+            text-shadow: 3px 3px 0px lime, 6px 6px 0px magenta;
+            letter-spacing: 8px;
+            font-size: 24px;
+            font-weight: 900;
+            background: linear-gradient(45deg, yellow, lime, orange, pink);
+            filter: blur(0.5px) contrast(200%) saturate(150%);
+            border-radius: 50% 0%;
+            padding: 20px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="app">
+        <h1>{{ título }}</h1>
+        <p>{{ msg }}</p>
+
+        <table>
+            <tr v-for="pessoa in contatos" :class="{ favorito: pessoa.favorito }">
+                <!-- tradução livre para python:
+                    if pessoa.favorito:
+                        class.append("favorito") 
+                -->
+                <td> <img width="50" :src="pessoa.foto" alt=""></td>
+                <td> {{ pessoa.nome }} </td>
+                <td> {{ pessoa.telefone }} </td>
+            </tr>
+        </table>
+
+
+        <div class="tenor-gif-embed" data-postid="25052428" data-share-method="host" data-aspect-ratio="1.77778" data-width="100%"><a href="https://tenor.com/view/davy-jones-resident-evil4-gif-25052428">Davy Jones Resident Evil4 GIF</a>from <a href="https://tenor.com/search/davy+jones-gifs">Davy Jones GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="agenda.js"></script>
+</body>
+</html>
